@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="calls-container">
+    {% for call in calls %}
+    <div class="list-item">
+        <h3>{{ call.from_to }}</h3>
+        <p>Type: {{ call.type }}</p>
+        <p>Duration: {{ call.duration }} seconds</p>
+        <p class="timestamp">Time: {{ call.time }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

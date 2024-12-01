@@ -1,0 +1,14 @@
+
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Messages</h2>
+    <div class="message-list">
+        {% for msg_type, sender, time, text, formatted_time in messages %}
+        <div class="message-card">
+            <p><strong>{{ msg_type }}</strong> - {{ sender }}</p>
+            <p>{{ text }}</p>
+            <p class="timestamp">{{ formatted_time }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

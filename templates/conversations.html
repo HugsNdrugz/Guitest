@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="conversations-container">
+    {% for convo in conversations %}
+    <a href="/conversation/{{ convo.sender }}" class="conversation-card">
+        <div class="avatar">{{ convo.sender[0] }}</div>
+        <div class="conversation-details">
+            <h3>{{ convo.sender }}</h3>
+            <p>Last message: {{ convo.last_message_time }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

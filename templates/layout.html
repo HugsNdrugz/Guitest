@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger App</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1>Messenger</h1>
+            <nav>
+                <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Chats</a>
+                <a href="/calls" class="{{ 'active' if request.path == '/calls' else '' }}">Calls</a>
+                <a href="/apps" class="{{ 'active' if request.path == '/apps' else '' }}">Apps</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+</body>
+</html>

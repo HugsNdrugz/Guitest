@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="apps-container">
+    {% for app in apps %}
+    <div class="list-item">
+        <h3>{{ app.name }}</h3>
+        <p>Installed on: {{ app.date }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

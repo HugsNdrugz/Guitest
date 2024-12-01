@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="messages-container">
+    {% for msg in messages %}
+    <div class="message {{ 'sent' if msg.type == 'Chat' else 'received' }}">
+        <p>{{ msg.text }}</p>
+        <span class="timestamp">{{ msg.time }}</span>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
